@@ -1,0 +1,43 @@
+export default {
+  "en-us": {
+ 	'signInSWF':'请签入软电话'
+
+  },
+  "zh-cn": {
+	'signInSWF':'请签入软电话',
+	'failToFechCarInfo':'查询车辆失败',
+	'noCarinfo':'未获取车辆信息',
+	'plsSubTicketAftCall':'请在通话结束后提交工单',
+	'subTicketSuccess':'提交工单成功',
+	'subTicketFail':'提交工单失败',
+	'cannotPubself':'受理人不能为自己',
+	'uploadSuccess':'文件添加成功',
+	'uploadFail':'文件添加失败',
+	'onlyPngJpg':'只支持jpg、png格式图片!',
+	'pictureMax10MB':'图片必须小于10MB!',
+	'requiredTicketType':'工单类型为必填项!',
+	'requiredLinkPhone':'联系号码为必填项!',
+	'mobileLength11':'手机号码为11位!',
+	'ticketDescLimited':'工单描述不能超过1000个字符!',
+	'ticketDescLimitedMsg':'1000个字符以内',
+	'callTransferRequired':'请选择通话转接对象！',
+	'pleaseEnterCorrectPhone':'请填写正确的电话号码！',
+	'softCallDisconnect':'连接已断开',
+	'failToSearchCarInfo':'查询车辆失败',
+	'failToSearchCarAddr':'刷新车辆位置失败',
+	'POIPushSuccess':'发送到车辆成功！',
+	'POIPushFail':'发送到车辆失败！',
+	'failToDial':'获取呼叫号码失败',
+	'wrongCarParams':'车辆信息参数错误 !',
+	'failToSearchCarinfo':'未查询到相关车辆信息',
+	'transTicketSuccess':'转交工单成功',
+	'endTicketSuccess':'完结工单成功',
+	'getCallInfoFail':'获取呼叫信息失败',
+	'nocarAddr':'未获取车辆位置',
+	'serverErr':'服务器异常',
+	'desc':'描述：',
+	'notAllowedDail': '当前状态不能外呼',
+	'noServicePoints': '未搜索到附近的救援服务站',
+
+  },
+}

@@ -1,0 +1,48 @@
+// https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+@red: #F43160;
+@redHover:rgba(244, 49, 96, 0.8);
+@green: #4CD964;
+@greenHover: #74de71;
+@hover:#e6f7ff;
+
+@divider:#e8e8e8;
+@grey:#BCBCBC;
+@warning:#fc3;
+@redOrange:#FC6767;
+@blue:#0097E0;
+@blueDeep:#1890FF;
+
+.orangeButton(@width:80px, @height:30px) {
+  border: 1px solid #ff6600;
+  background: #ff9900;
+  color: #fff;
+  width: @width;
+  height: @height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-break: keep-all;
+  cursor: pointer;
+}
+.noIcon(@width:100px, @height:100px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  & > div{
+    background: #F2F2F2;
+    color: #fff;
+    border-radius: 50%;
+    width: @width;
+    height: @height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  p{
+    font-family: PingFangSC-Regular;
+    font-size: 17px;
+    color: rgba(0,0,0,0.45);
+  }
+}

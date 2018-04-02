@@ -1,2 +1,36 @@
 {
+  "entry": "src/index.js",
+  "extraBabelPlugins": [
+    ["import", { "libraryName": "antd", "libraryDirectory": "lib", "style": true }]
+  ],
+  "env": {
+    "development": {
+      "extraBabelPlugins": [["module-resolver", {
+          "alias": {
+            "components": "./src/components",
+            "routes": "./src/routes",
+            "common": "./src/common",
+            "utils": "./src/utils",
+            "layouts":"./src/layouts",
+            "services": "./src/services",
+            "assets": "./src/assets"
+          }
+         }], "dva-hmr"]
+    },
+    "production": {
+      "extraBabelPlugins": [["module-resolver", {
+          "alias": {
+            "components": "./src/components",
+            "routes": "./src/routes",
+            "common": "./src/common",
+            "utils": "./src/utils",
+            "layouts":"./src/layouts",
+            "services": "./src/services",
+            "assets": "./src/assets"
+          }
+         }]],
+         "publicPath": "http://scdn.xchanger.cn/ecarx-web/X-Call-System/origin/beta/"
+    }
+  },
+  "ignoreMomentLocale": true
 }

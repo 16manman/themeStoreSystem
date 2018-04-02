@@ -1,0 +1,27 @@
+@import url('../../theme.less');
+.row{
+	margin-bottom: 20px;
+	font-size: 12px;
+	display: flex!important;
+}
+.callerInfo{
+	.title{
+		color: @blue;
+		border-bottom:  1px solid #ccc;
+		padding: 8px 24px;
+		position: relative;
+		&:after{
+			content: "";
+			position: absolute;
+			bottom:0;
+			left: 0;
+			display: block;
+			height: 1px;
+			background: @blue;
+			width:106px;
+		}
+	}
+	.desc{
+		padding: 20px 15px 5px;
+	}
+}

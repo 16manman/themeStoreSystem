@@ -1,0 +1,66 @@
+@import "~antd/lib/style/themes/default.less";
+
+.pageHeader {
+  // background: @component-background;
+  padding: 10px 24px;
+  // border-bottom: @border-width-base @border-style-base @border-color-split;
+
+  .detail {
+    display: flex;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  // .breadcrumb {
+  //   margin-bottom: 16px;
+  // }
+
+  .title {
+    font-size: 20px;
+    font-weight: 500;
+    color: @heading-color;
+  }
+
+
+
+  .extraContent {
+    margin-left: 88px;
+    min-width: 242px;
+  }
+}
+
+@media screen and (max-width: @screen-xl) {
+  .pageHeader {
+    .extraContent {
+      margin-left: 44px;
+    }
+  }
+}
+
+@media screen and (max-width: @screen-lg) {
+  .pageHeader {
+    .extraContent {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: @screen-md) {
+  .pageHeader {
+    .row {
+      display: block;
+    }
+
+  }
+}
+
+@media screen and (max-width: @screen-sm) {
+  .pageHeader {
+    .detail {
+      display: block;
+    }
+  }
+}
+

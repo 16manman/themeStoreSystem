@@ -3,13 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dva Demo</title>
+  <title>呼叫中心</title>
   <link rel="stylesheet" href="index.css" />
+  <script type="text/javascript">
+
+  </script>
 </head>
 <body>
-
+  <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.4&key=26d10d3b1ce1aef7e9909c4a2b88d097&plugin=AMap.Geocoder"></script>
+  <script type="text/javascript" src="./SWFObject.js"></script>  		
+  <script src="https://js.fundebug.cn/fundebug.0.3.6.min.js"
+        apikey="89dcbee4b7ff284c9df2599edb745243b08b842574e8f2bb195c48b51c31540e"></script>
+  <script type="text/javascript">
+		swfobject.embedSWF("./CTIClient.swf", "CTIClient", "900", "140", "9.0.0", undefined, undefined, {"play": "true" ,"IsAutoPlay": "true", });
+  </script>
   <div id="root"></div>
   <script src="index.js"></script>
-
+  <div id="CTIClient">
+    <h1>Alternate HTML content should be placed here.</h1>
+    <p>This content requires the Adobe Flash Player.</p>
+    <a href=http://www.adobe.com/go/getflash/>Get Flash</a>
+  </div>
 </body>
 </html>

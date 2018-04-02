@@ -1,0 +1,336 @@
+@import url('../../theme.less');
+@panelHeight:314px;
+ol, ul, dl, p{
+	margin:0;
+	padding:0;
+}
+
+
+.hidePanelWrap{
+	right:-290px;
+	position: fixed;
+	top:65px;
+}
+.fixedPanelWrap{
+	position: fixed;
+	top:0;
+	right:0;
+}
+.panelWrapAbsolute{
+	position: absolute;
+	top:65px;
+	right:0;
+}
+.disabled{
+	opacity: 0.3!important;
+	cursor:  not-allowed!important;
+	&:hover{
+		background: none!important;
+	}
+}
+.panelScroll{
+	width:310px;
+	overflow-y: auto;
+	height:100%;
+}
+.panelBox{
+	width:285px;
+	// padding-bottom: 30px;
+}
+.panelHeaderWrap{
+	.panelHeader{
+		padding-right:20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height:53px;
+		.trigger{
+			font-size: 24px;
+			padding: 0 20px;
+			height:100%;
+			cursor: pointer;
+			display: flex;
+	    	align-items: center;
+			&:hover{
+				background: @hover;
+			}
+		}
+		.localTel{
+			font-size: 12px;
+			color: #999;
+			margin:0;
+			padding:0;
+		}
+	}
+}
+
+
+.contentWrap{
+	padding:0 20px 20px;
+	box-sizing: border-box;
+	height:393px;
+	position: relative;
+}
+.dialWrap{
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+	padding:0;
+	margin-top:10px;
+	justify-content: space-between;
+	li{
+		width: 70px;
+		border-radius: 4px;
+		height: 40px;
+		font-size: 20px;
+		font-family: PingFangSC-Medium;
+		font-size: 20px;
+		color: rgba(0,0,0,0.65);
+		margin-bottom: 15px;
+		border: 1px solid #D9D9D9;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		&:hover{
+			border: 1px solid rgb(16, 141, 233);
+			color: #108DE9;
+		}
+	}
+}
+.callBtn, .onhookbtn, .linkingBtn{
+	position: absolute;
+	bottom: 20px;
+	left:50%;
+	z-index: 1;
+	transform: translateX(-50%);
+	width:240px;
+	background: @green;
+	color:#fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height:40px;
+	border-radius: 5px;
+	cursor: pointer;
+	&:hover{
+		background:@greenHover;
+	}
+}
+.onhookbtn{
+	background: @red;
+	&:hover{
+		background:@redHover;
+	}
+}
+.linkingWrap{
+	box-sizing: border-box;
+	height:393px;
+}
+.callingInfo, .linkingWrap{
+	text-align: center;
+	position: relative;
+	color: rgba(0,0,0,0.65);
+	.thirdPartyTag{
+	    border-width: 0px;
+	    position: absolute;
+	    left: 50%;
+	    top: 13px;
+	    border-radius: 18px;
+	    color: #fff;
+	    background: @blue;
+	    line-height: 20px;
+	    height:20px;
+	    width:68px;
+	    font-size: 10px;
+	    text-align: center;
+	    padding: 0 7px;
+	    transform: translate(-50%,0);
+	}
+	.phoneNumber{
+		padding-top:43px;
+		font-family: PingFangSC-Regular;
+		font-size: 26px;
+		height:37px;
+		line-height: 37px;
+		padding-bottom: 8px;
+		box-sizing: content-box;
+		margin-bottom: 0;
+	}
+	.phoneAddr,.phoneTime{
+		line-height: 20px;
+		font-family: PingFangSC-Regular;
+		font-size: 14px;
+		height:20px;
+		margin-bottom: 0;
+
+	}
+	.phoneAddr{
+		margin-bottom: 11px;
+	}
+	.phoneTime{
+		font-family: PingFangSC-Regular;
+		font-size: 14px;
+	}
+	.callStateText{
+		color:@blue;
+	}
+	.recording{
+		font-size: 12px;
+		color: @blue;
+		text-align: center;
+		font-family: PingFangSC-Regular;
+		line-height: 17px;
+		position: relative;
+		margin-bottom: 0;
+	}
+
+	.callingControl{
+		display: flex;
+		padding-top: 46px;
+		padding-bottom: 20px;
+		height:60px;
+		box-sizing: content-box;
+		li{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			cursor: pointer;
+			width:60px;
+			height:100%;
+			&:hover{
+				background: @hover;
+			}
+			.icon{
+				font-size: 20px;
+				color: rgba(0,0,0,0.65);
+			}
+			& > span{
+				color: rgba(0,0,0,0.65);
+				font-size: 12px;
+			}
+		}
+	}
+}
+.callingDesc{
+	position: absolute;
+	top:100%;
+	left:50%;
+	height:20px;
+	line-height: 20px;
+	transform: translateX(-50%);
+    color: rgba(0, 0, 0, 0.65);
+    padding-top: 10px;
+	font-size: 12px;
+}
+.toggleDial{
+	.icon{
+		font-size: 20px;
+		cursor: pointer;
+	}
+	text-align: center;
+	opacity: 0.65;
+	color: #000;
+	position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+:global{
+	.clearIcon{
+		cursor: pointer;
+		color:#999;
+	}
+	/*转接*/
+	.transfModal.ant-radio-group{
+		display: flex;
+		justify-content: space-around;
+	    padding: 20px 0;
+		width: 100%;
+	}
+	.transfModal{
+		.ant-radio-button-wrapper,{
+			width: 140px;
+		    height: 40px;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		 	cursor: pointer;
+		 	margin: 0;
+			border-radius: 4px!important;
+		}
+		.ant-radio-button-wrapper {
+			border: 1px solid #D9D9D9;
+			background: #FFFFFF;
+		    color: rgba(0, 0, 0, 0.65);
+		    transition: all 0.3s ease;
+		    position: relative;
+		}
+		.ant-radio-button-wrapper.ant-radio-button-wrapper-checked {
+			border: none;
+		    box-shadow: -1px 0 0 0 #1890ff;
+		    z-index: 1;
+		    background: #1890FF;
+		    color: #fff;
+		}
+
+	}
+	.panelWrapCommon{
+		transition: all 0.3s;
+		bottom:0;
+		background: #fff;
+		box-sizing: border-box;
+		overflow:hidden;
+		z-index:1000;
+		width:285px;
+		.ant-divider-horizontal{
+			margin:0;
+		}
+		.ant-input{
+			border: none;
+			border-bottom: 1px solid rgb(204, 204, 204);
+			height:40px;
+		}
+		.ant-input:focus, .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled){
+			border: none!important;
+			border-bottom: 1px solid rgb(204, 204, 204)!important;
+			box-shadow: none!important;
+		}
+		.dialpanel .input{
+			margin-top:13px;
+			input{
+				border: none;
+				border-bottom: 1px solid rgba(0,0,0,0.09);
+				font-family: PingFangSC-Regular;
+				font-size: 26px;
+				color: rgba(0,0,0,0.65);
+				text-align: center;
+				padding-right: 30px;
+			}
+		}
+	}
+	
+	
+}
+//来电显示头像
+.defaultAvatar{
+	background: #F2F2F2;
+	width:100px;
+	height:100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin:20px auto;
+	border-radius: 50%;
+}
+.callTag{
+	width:68px;
+	height:20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 12px;
+	color: #fff;
+}
